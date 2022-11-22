@@ -1,0 +1,29 @@
+{
+  "name": "rxjs-fundamentos",
+  "version": "1.0.0",
+  "description": "[diapositivas](https://static.platzi.com/media/public/uploads/2-slides-del-curso-de-programacion-reactiva-con-rxjs_dc67a054-992f-4bea-9bd9-c440fab6b94c.pdf)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngPorto/rxjs-fundamentos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IngPorto/rxjs-fundamentos/issues"
+  },
+  "homepage": "https://github.com/IngPorto/rxjs-fundamentos#readme",
+  "dependencies": {
+    "rxjs": "^7.5.7",
+    "webpack": "^5.75.0",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.0"
+  }
+}
