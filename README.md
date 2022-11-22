@@ -2,6 +2,7 @@
 [diapositivas](https://static.platzi.com/media/public/uploads/2-slides-del-curso-de-programacion-reactiva-con-rxjs_dc67a054-992f-4bea-9bd9-c440fab6b94c.pdf)
 
 ## Beneficios
+---
 * Base de código mucho más legible (simplifica el callback hell)
 * Simplifica los procesos asíncronos
 * Simplifica la transformación de información
@@ -12,7 +13,7 @@ Nota:
 * [ReactiveX](https://reactivex.io)
 
 ## Teoría
-
+---
 **Observable:** Puede emitir cualquier tipo de valores respecto al tiempo. Emite la señal de que ha sucedido y qué sucedió. 
 
 **Suscripción:** Es como un EventListener que permite escuchar eventos.
@@ -33,8 +34,9 @@ Sistemas asíncronos a gran escala con el patrón `Observer` y `Iterator`.
 Nace en .NET, luego en Java.
 
 ### Reactividad
-
-<OBSERVABLE> <---<SUSCRIPCIÓN>--- <OBSERVADOR>
+```html
+<OBSERVABLE> <---<SUSCRIPCIÓN>---| <OBSERVADOR>
+```
 
 **Observable Contract**
 **Métodos para interectuar con el Observable**
@@ -53,3 +55,37 @@ Evaluación Lazy: Esta función no es ejecutada hasta que se llame. Si un observ
 [rxmarbles](https://rxmarbles.com/)
 
 OPERADOR: Transforma los valores de un observable a otro observable
+
+## Práctica 
+---
+
+### fromEvent
+Crea un observable que emite eventos de un determinado elemento
+```
+fromEvent(elemento,'click')
+```
+### PlatziWordle
+**Desarrollo de proyecto**
+1. Instrucciones para inicializar nuestro proyecto
+```
+npm i rxjs webpack webpack-dev-server
+npm i -D webpack-cli
+```
+2. Crea tu archivo de configuración con Webpack
+```
+const path = require('path');
+module.exports = {
+    entry: './src/index.js',
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'public')
+    },
+    mode: 'development'
+}
+```
+3. En la propiedad scripts de package.json añade:
+```
+"scripts": {
+    "start": "webpack server"
+}
+```
