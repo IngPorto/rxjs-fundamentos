@@ -56,6 +56,27 @@ Evaluación Lazy: Esta función no es ejecutada hasta que se llame. Si un observ
 
 OPERADOR: Transforma los valores de un observable a otro observable
 
+### Subject
+Operador que permite unificar un mensaje emitido por un Observable. Permite la multi-difusión o multi-cast.
+
+* Es un tipo de observador que puede suscibirse a otros observables.
+* Permite agregar parámetos a su función .next() después de ser inicializada.
+
+### From y Of
+Permite la creación de Observables. Al suscribirse a uno de estos operadores, se pasa como parámetros una función a la cual es le entregará cada parámetro entregado en la inicialización del Observable.
+
+- **From**:
+Creación de Observable a partir de un arreglo. El último parámetros del arreglo es donde el Observable emite el `Complete`.
+
+- **Of**:
+Creación de Observable a partir de un *n* candidad de parámetros de entrada. El último parámetro de entrada detemina donde el Observable emite el `Complete`.
+
+### asynSchedulers
+Envía las operacione al Queue de JS
+
+**Cómo funcionan las operaciones no bloqueantes:**
+(Operación o tarea js) --[cuando inicia el programa va a]--> `Call Stack` --[Si es una tarea bloqueante, que dura un tiempo, se envía a]--> `Thread Pool` --[cuando se completa la operación se envía a]--> `Queue` ---[una vez el programa complete un ciclo, envía las tareas pendientes a]---> `Call Stack`
+
 ## Práctica 
 ---
 
