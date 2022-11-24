@@ -56,6 +56,12 @@ Evaluación Lazy: Esta función no es ejecutada hasta que se llame. Si un observ
 
 OPERADOR: Transforma los valores de un observable a otro observable
 
+### Subject
+Operador que permite unificar un mensaje emitido por un Observable. Permite la multi-difusión o multi-cast.
+
+* Es un tipo de observador que puede suscibirse a otros observables.
+* Permite agregar parámetos a su función .next() después de ser inicializada.
+
 ## Práctica 
 ---
 
